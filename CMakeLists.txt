@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 
 project (MTCNN_APP)
 
-set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package( OpenCV REQUIRED )
@@ -16,11 +16,21 @@ set(SOURCES
 ./mtcnn/pnet.cpp ./mtcnn/rnet.cpp
 ./mtcnn/detector.h ./mtcnn/helpers.h ./mtcnn/onet.h ./mtcnn/pnet.h ./mtcnn/rnet.h
 ./draw.hpp
+./helpers.hpp
 )
 
 set(APP_SOURCES
-infer_photo.cpp
-infer_cam.cpp
+# infer_photo.cpp
+# infer_photo2.cpp
+# mtcnn_lfw.cpp
+# mtcnn_rafi.cpp
+mtcnn_ibug.cpp
+mtcnn_lfw_160.cpp
+# mtcnn_mugshot.cpp
+# yolo_lfw.cpp
+# yolo_mugshot.cpp
+# dnn_mugshot.cpp
+# infer_cam.cpp
 )
 
 foreach( sourcefile ${APP_SOURCES} )
